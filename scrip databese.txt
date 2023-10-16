@@ -1,0 +1,28 @@
+CREATE DATABASE [Progra2]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'Progra2', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\Progra2.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'Progra2_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\Progra2_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT, LEDGER = OFF
+GO
+
+USE [Progra2]
+GO
+
+/****** Object:  Table [dbo].[estudiante]    Script Date: 15/10/2023 09:56:55 p. m. ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[estudiante](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Nombre] [varchar](50) NULL,
+	[Apellidos] [varchar](50) NULL,
+	[Edad] [int] NULL,
+	[Sexo] [varchar](50) NULL
+) ON [PRIMARY]
+GO
+
